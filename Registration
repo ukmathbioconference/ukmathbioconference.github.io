@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            background-color: #004080;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #004080;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #004080;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.button:hover {
+            background-color: #003366;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004080;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Intestazione -->
+    <header>
+        <h1>Registration</h1>
+    </header>
+
+    <!-- Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="registration.html">Registration</a>
+    </nav>
+
+    <!-- Contenuto -->
+    <section>
+        <h2>Register for the Conference</h2>
+        <p>
+            Please register for the UK Mathematical Biology Conference using the following form:
+        </p>
+        <!-- Link al Microsoft Form -->
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z8oksN7eQUKhXDyX1VPp86C-xNMUNS5HtZ6Vzk4kwjVUMjkzREJLSDVGSzRVVDlWVUMwVkxJWVRYTi4u" 
+           target="_blank" 
+           class="button">
+           Go to Registration Form
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 UK Mathematical Biology Conference</p>
+    </footer>
+</body>
+</html>
