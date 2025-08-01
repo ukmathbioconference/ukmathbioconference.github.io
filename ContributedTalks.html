@@ -86,15 +86,55 @@
     }
 
   .session-block {
-  background-color: #eaf1f8;
-  padding: 15px 20px;
-  margin-top: 30px;
-  border-left: 5px solid #004080;
+  margin-top: 20px;
+}
+
+.session-toggle {
+  width: 100%;
+  background-color: #004080;
+  color: white;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
   border-radius: 5px;
+}
+
+.session-toggle:hover {
+  background-color: #003366;
+}
+
+.session-content {
+  display: none; /* hidden by default */
+  padding: 15px 20px;
+  background-color: #f0f0f0;
+  border-left: 4px solid #004080;
+  border-radius: 0 0 5px 5px;
 }
 
   </style>
 </head>
+<script>
+  function toggleSession(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.display === "block";
+    content.style.display = isOpen ? "none" : "block";
+  }
+
+  function toggleAbstract(button) {
+    const content = button.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      button.textContent = "Show Abstract";
+    } else {
+      content.style.display = "block";
+      button.textContent = "Hide Abstract";
+    }
+  }
+</script>
+
 <body>
     <!-- Intestazione -->
     <header>
@@ -115,7 +155,7 @@
 
     <!-- Example Session Block -->
     <div class="session-block">
-    <h3>Session: Mathematical Oncology 1</h3>
+    <button class="session-toggle" onclick="toggleSession(this)">Session: Mathematical Oncology 1</button>
 
     <div class="talk">
       <strong>Speaker:</strong> Nathan Schofield<br/>
