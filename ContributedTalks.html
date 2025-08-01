@@ -93,12 +93,13 @@
   border-radius: 5px;
 }
 
-    .session-title {
+.session-title {
   cursor: pointer;
   font-size: 1.1em;
   font-weight: bold;
   color: #004080;
   margin: 0;
+  text-decoration: underline;
 }
 
 .session-content {
@@ -159,8 +160,9 @@
   </div>
 </div>
       
-<div class="session-block">
-     <h3>Session: Mechanics</h3>
+ <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Machanics</div>
+  <div class="session-content">
     <div class="talk">
       <strong>Speaker :</strong>Zoe Godard<br/>
       <strong>Title:</strong> Mathematical modelling of tendon damage <br/>
@@ -188,9 +190,11 @@
       </div>
     </div>
   </div>
+ </div>
     
-  <div class="session-block">
-     <h3>Session: Patterns and Waves 1</h3>
+   <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Patterns and Waves 1</div>
+  <div class="session-content">
      <div class="talk">
       <strong>Speaker:</strong> Alan Champneys<br/>
       <strong>Title:</strong> The importance of being subcritical - hysteresis and Maxwell equal-energy criteria in biological pattern formation  <br/>
@@ -199,6 +203,7 @@
       In this talk I shall survey recent work by myself and collaborators on an alternative view to the classical Turing-pattern view of the onset of pattern in biological systems. The chief context is that of cell polarity formation in which small GTPases that come in inactive cytosolic and active membrane-bound forms. We shall argue that for typical parameter values the symmetry-breaking bifurcation is typically subcritical. The onset of spatial pattern then occurs in a perfect system at the Maxwell point where homogeneous and spatial patterned states have equal values of some notion of energy. The existence of this Maxwell point not only makes spatially localised patterns more prevalent, but also adds additional complexity to the so-called Busse balloon of stable periodic patterns with different wavenumber.  There are additional complexities if timescales are such that protein species are preserved. Then there is a propensity to form polarity through spatial fronts, whose location can be predicted by a novel theory of wave-pinning. Applications are discussed at very different spatial scales, namely plant cell polarity formation and the spatial ecology of desertification and savanna-rainforest transition. The overall conclusion is that biology is likely to favour subcritical bifurcation with its consequent hysteresis as this allows robust, sudden transitions to occur in the presence of slow and/or noisy parameter variation.
       </div>
     </div>
+  
 
     <div class="talk">
       <strong>Speaker:</strong> Lukas Eigentler<br/>
@@ -208,6 +213,7 @@
       Many patterned ecosystems, such as dryland vegetation patterns and intertidal mussel beds can be described by PDEs admitting periodic travelling waves (PTWs). Under a changing environment that increases stress, such systems undergo a cascade of wavelength changes before an extinction event occurs. Classically, wavelength changes have been predicted by identifying the intersection of a PTW’s wavelength contour with a stability boundary in the system’s Busse balloon. In this talk, I highlight that this information is often insufficient because of a delayed loss of stability phenomenon. I show that PTWs can persist as transients for ecologically significant times after the crossing of a stability boundary in the Busse balloon. I present a method that can predict the order of magnitude of the time delay between the crossing of a stability boundary and the occurrence of a wavelength change by linking the delay to features of the essential spectra of the PTWs.
       </div>
     </div>
+      
     <div class="talk">
       <strong>Speaker:</strong> Blaine van Rensburg <br/>
       <strong>Title:</strong> The role of mutants in the progression of inflammatory bowel disease: three classes of permanent form travelling waves <br/>
@@ -217,15 +223,15 @@
     </div>
   </div>
  </div>
-
-    <!-- Repeat for each talk... -->
+   </div>
 
   </section>
 
   <section>
     <h2>Contributed Talks Thursday 04 September 15:30-16:30 </h2>
-    <div class="session-block">
-     <h3>Session: Epidemiology</h3>
+     <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Epidemiology</div>
+  <div class="session-content">
       <div class="talk">
       <strong>Speaker:</strong> Neha Bansal <br/>
       <strong>Title:</strong> From Rooms to Countries: Tackling Mesoscale and Macroscale Challenges in Zoonotic Epidemic Modelling  <br/>
@@ -253,9 +259,11 @@
       </div>
   </div>      
 </div>
+</div>
 
-    <div class="session-block">
-     <h3>Session: Mathematical Oncology 2</h3>
+     <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Mathematical Oncology 2</div>
+  <div class="session-content">
       <div class="talk">
       <strong>Speaker:</strong>  Alexis Farman <br/>
       <strong>Title:</strong> Enhancing immunotherapies: Insights from the mathematical modelling of a microfluidic device <br/>
@@ -292,9 +300,11 @@
       </div>
   </div>      
 </div>
+     </div>
 
-    <div class="session-block">
-     <h3>Session: Develomental Biology</h3>
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Developmental Biology</div>
+  <div class="session-content">
 
       <div class="talk">
       <strong>Speaker:</strong> Marine Fontaine <br/>
@@ -333,9 +343,11 @@
   </div> 
       
     </div>
+      </div>
 
-    <div class="session-block">
-     <h3>Session: Neuroscience</h3>
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Neuroscience</div>
+  <div class="session-content">
     <div class="talk">
       <strong>Speaker:</strong> Stanis Caw Biber <br/>
       <strong>Title:</strong> Deep brain stimulation in Parkinson's Disease: Insights from mathematical understanding of entrainment <br/>
@@ -373,9 +385,11 @@
   </div>   
         
     </div>
+      </div>
 
-    <div class="session-block">
-     <h3>Session: Plant Sciences</h3>
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Plant Science </div>
+  <div class="session-content">
     <div class="talk">
       <strong>Speaker:</strong> Samuel Harris <br/>
       <strong>Title:</strong> Electrocuting flowers: a guide from AAA to bee <br/>
@@ -413,6 +427,7 @@
   </div>
         
     </div>
+      </div>
 
     
     
@@ -420,8 +435,9 @@
 
   <section>
     <h2>Contributed Talks Friday 05 September 10:30-12:00 </h2>
-    <div class="session-block">
-     <h3>Session: Cell biology</h3>
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Cell Biology</div>
+  <div class="session-content">
     <div class="talk">
       <strong>Speaker:</strong> Charlotte Taylor Barca <br/>
       <strong>Title:</strong> Modelling cell state dynamics in melanoma <br/>
@@ -478,9 +494,11 @@
 
         
     </div>   
+      </div>
 
-      <div class="session-block">
-     <h3>Session: Cell migration</h3>
+        <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Cell Migration</div>
+  <div class="session-content">
 
      <div class="talk">
       <strong>Speaker:</strong> Mehmet Can Ucar <br/>
@@ -537,9 +555,11 @@
   </div>
 
     </div>
+        </div>
 
-      <div class="session-block">
-     <h3>Session: Evolution</h3>
+        <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session:Evolution</div>
+  <div class="session-content">
     
     <div class="talk">
       <strong>Speaker:</strong> Paul Blackwell <br/>
@@ -588,9 +608,11 @@
 
           
     </div>
+        </div>
 
-      <div class="session-block">
-     <h3>Session: Fluidodynamics</h3>
+        <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Fluidodynamics</div>
+  <div class="session-content">
     <div class="talk">
       <strong>Speaker:</strong> Carl Whitfield <br/>
       <strong>Title:</strong> Multi-fidelity modelling of flow and solute transport in the placental intervillous space  <br/>
@@ -645,14 +667,15 @@
       </div>
   </div>
  </div>
+        </div>
   
   </section>
 
    <section>
     <h2>Contributed Talks Friday 05 September 13:30-14:30 </h2>
-    <div class="session-block">
-     <h3>Session: Mathematical Oncology 3</h3>
-    
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Mathematical Oncology 3</div>
+  <div class="session-content">
     <div class="talk">
       <strong>Speaker:</strong> MARYAM ALKA <br/>
       <strong>Title:</strong> Mathematical Modelling of Tumour Dynamics in Hypoxic Environments <br/>
@@ -680,9 +703,11 @@
       </div>
   </div>
  </div>
+      </div>
 
-    <div class="session-block">
-     <h3>Session: Methods for Data</h3>
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Methods for Data</div>
+  <div class="session-content">
      <div class="talk">
       <strong>Speaker:</strong> Joshua Bull <br/>
       <strong>Title:</strong> Unifying spatial data and spatial models with MuSpAn <br/>
@@ -711,9 +736,11 @@
  </div>
         
     </div>
+      </div>
 
-    <div class="session-block">
-     <h3>Session: Health and Disease</h3>
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Health and Disease</div>
+  <div class="session-content">
 
         
      <div class="talk">
@@ -743,9 +770,11 @@
       </div>
  </div>        
     </div>
+      </div>
 
-    <div class="session-block">
-     <h3>Session: Patterns and Waves 2</h3>
+      <div class="session-block">
+  <div class="session-title" onclick="toggleSession(this)">Session: Patterns and Waves 2</div>
+  <div class="session-content">
 <div class="talk">
       <strong>Speaker:</strong> Jonathan Potts <br/>
       <strong>Title:</strong> Aggregation-diffusion in heterogeneous environments <br/>
@@ -775,6 +804,7 @@
         
         
     </div>
+      </div>
   </section>
 
   <footer>
