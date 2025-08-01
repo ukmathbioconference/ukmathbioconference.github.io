@@ -638,22 +638,128 @@
     <h2>Contributed Talks Friday 05 September 13:30-14:30 </h2>
     <div class="session-block">
      <h3>Session: Mathematical Oncology 3</h3>
+    
+    <div class="talk">
+      <strong>Speaker:</strong> MARYAM ALKA <br/>
+      <strong>Title:</strong> Mathematical Modelling of Tumour Dynamics in Hypoxic Environments <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+  Understanding tumour dynamics under hypoxic conditions is critical for optimising cancer therapies, particularly with chemotherapeutic agents like Paclitaxel. This study presents a refined mathematical model of tumour growth that incorporates Paclitaxel effects and hypoxia-driven resistance using a system of nonlinear ordinary differential equations (ODEs). We employ the Metropolis-Hastings Markov Chain Monte Carlo (MH MCMC) algorithm for Bayesian inversion and parameter estimation, providing a probabilistic framework to capture uncertainties. Sensitivity analysis is conducted using the multiple shooting method, which enhances the stability and accuracy of local sensitivity estimates across time intervals. The simulation results demonstrate that cell viability is reduced under moderate hypoxia when treated with Paclitaxel, which is consistent with experimental data from HCC1806 breast cancer cell lines. This agreement between model predictions and experimental outcomes supports the model’s validity in capturing key biological mechanisms. Future work will extend the model using Physics-Informed Neural Networks (PINNs) to improve computational efficiency and explore advanced inverse problem-solving techniques for robust cancer treatment optimisation.
+      </div>
+  </div>
 
-    </div>
+<div class="talk">
+      <strong>Speaker:</strong> Einar Bjarki Gunnarsson <br/>
+      <strong>Title:</strong> Optimal dosing of anti-cancer treatment under drug-induced plasticitys <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+  While cancer has traditionally been considered a genetic disease, mounting evidence indicates an important role for non-genetic (epigenetic) mechanisms. These mechanisms usually operate faster than genetic mutations and they can drive cancer evolution and the evolution of drug resistance in the absence of any genetic events. Moreover, common anti-cancer drugs have recently been observed to induce the adoption of non-genetic drug-tolerant cell states, thereby accelerating resistance evolution. This confounds conventional high-dose treatment strategies aimed at eradicating the tumor bulk, since high doses can simultaneously promote non-genetic resistance. In this work, we study optimal dosing of anti-cancer treatment under drug-induced cell plasticity. We show that the optimal strategy steers the tumor into a fixed equilibrium composition while precisely balancing the trade-off between cell kill and tolerance induction. The optimal equilibrium strategy ranges from applying a low constant dose to alternating between the maximum allowable dose and no dose, depending on the dynamics of tolerance induction. The directionality of tolerance induction, whether the drug elevates transitions from sensitivity to tolerance or inhibits transitions back, significantly affects optimal dosing, both in the short and long term. To demonstrate the applicability of our approach, we use it to identify an optimal low-dose strategy for colorectal cancer using publicly available in vitro data.
+</div>
+  </div>
+
+    <div class="talk">
+      <strong>Speaker:</strong> David Basanta <br/>
+      <strong>Title:</strong> Spatial models of the cancer ecosystem during treatment <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+ The complex interplay within the cancer ecosystem critically influences tumor evolution and the emergence of treatment resistance. Mathematical modeling provides powerful tools to dissect these dynamics. This talk presents an integrated approach combining spatial metrics with agent-based models (ABMs). We utilize spatial statistics derived from clinical and preclinical data to quantify tumor-environment interactions and spatial heterogeneity. These quantitative insights then inform the development and parameterization of mechanistic ABMs. I will demonstrate how this framework allows for the simulation and in silico testing of novel therapeutic strategies designed to exploit the ecological and evolutionary vulnerabilities of cancer.
+      </div>
+  </div>
+ </div>
 
     <div class="session-block">
      <h3>Session: Methods for Data</h3>
+     <div class="talk">
+      <strong>Speaker:</strong> Joshua Bull <br/>
+      <strong>Title:</strong> Unifying spatial data and spatial models with MuSpAn <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+          The recent revolution in spatial proteomics and transcriptomics technologies enables transcript and protein expression levels to be mapped across entire tissue sections, for thousands of markers spanning spatial scales from the subcellular to the tissue scale. Simultaneously, advances in computational performance mean that agent-based models, mathematical models which simulate emergent population level behaviour from the interactions of individuals, can be simulated at a larger scale than ever and under increasingly vast parameter regimes. These twin scientific advances, in both biological imaging and mathematical modelling, mean that the spatial complexity of both in vivo and in silico systems can be recorded and compared as never before. Unlocking the potential of ABMs in the context of these images presents a key challenge to the mathematical modelling community: how can we compare in silico models against data quantitatively, rigorously, and at scale, while ensuring that key emergent spatial behaviours of the system are adequately captured? Standard spatially aggregated statistics, such as cell counts or densities, do not capture key variations in geometry, topology, and intercellular interactions. A wide range of methods have been proposed to describe this spatial structure, from fields as diverse as topological data analysis, spatial statistics, and networks. In this talk, we show how MuSpAn, a new Python package for spatial analysis, allows users to easily integrate key mathematical methods from these fields and beyond into a robust set of metrics to comprehensively describe spatial data. We use MuSpAn to directly compare the spatial behaviours of ABMs against experimental and clinical data, unlocking new possibilities for model parameterization and data analysis. We demonstrate the power of this approach in a range of biological contexts, including pattern formation in developmental biology, morphological changes in models of tumour-vasculature interactions, and the formation of tertiary lymphoid structures in colorectal cancer.
+  </div>
+ </div>
 
+     <div class="talk">
+      <strong>Speaker:</strong> Sebastian Persson<br/>
+      <strong>Title:</strong> PEtab.jl - Next generation software for parameter estimation <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+    Modeling biological dynamic processes with Stochastic or Ordinary Differential Equations (SDEs/ODEs) is often an iterative process where multiple models are constructed and evaluated. Consequently, for efficient modeling, software that enables rapid model evaluation is important.   A common approach to evaluate a model is to fit the model to time-lapse data by estimating unknown model parameters. However, parameter estimation for ODEs and SDEs is often computationally demanding. Further, for ODEs, access to the gradient is beneficial, and although many toolboxes exist for gradient-based estimation, most do not support automatic differentiation. Therefore, gradient computations partly rely on analytically derived expressions which makes it hard to handle non-standard scenarios such as scientific machine learning (SciML) models. Lastly, most toolboxes lack support for parameter estimating SDEs.   To address these factors, we have developed PEtab.jl, a Julia package for formulating parameter estimation problems for dynamic models. In addition to focusing on high performance and flexibility through automatic differentiation, PEtab.jl is extensively documented and designed to be user-friendly. Here, we demonstrate how PEtab.jl can be used for ODE-based automatic model selection to study histone acetylation in Drosophila melanogaster, as well as how it can be used to fit a stochastic SIR model to study disease spread in a population. We will also describe how the package is currently being expanded to support hybrid SciML models that combine data-driven neural networks with mechanistic models. Finally, we will address the question whether Julia should be used for parameter estimation in biology by presenting results from an extensive benchmark on real models with real data, in which PEtab.jl was evaluated against pyPESTO using the C++ AMICI simulation engine. 
+      </div>
+ </div>
+
+        <div class="talk">
+      <strong>Speaker:</strong> Muhan Ma <br/>
+      <strong>Title:</strong> AI-Based Inference of transcriptional bursting from Live-Cell Imaging Data <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+   Quantifying transcriptional bursting from live-cell imaging data is critical for understanding stochastic gene regulation. We introduce an AI–based framework for inferring transcription bursting periods from fluorescence trajectories, achieving improved accuracy and robustness compared to widely used approaches such as hidden Markov models (HMMs) and threshold-based methods. Trained on synthetic data and validated against experimental data, our method shows robustness under experimental noise, reliably capturing complex transcriptional dynamics. By integrating AI with stochastic modeling, this approach provides a flexible and computationally efficient tool for the quantitative analysis of gene expression dynamics in single cells.
+      </div>
+ </div>
+        
     </div>
 
     <div class="session-block">
      <h3>Session: Health and Disease</h3>
 
+        
+     <div class="talk">
+      <strong>Speaker:</strong> Olukayode Adebimpe <br/>
+      <strong>Title:</strong> Mathematical Modelling of Hepatitis B Virus with Vital Dynamics <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+  In this work, a compartmental mathematical model incorporating vital dynamics to analyze the spread and control of Hepatitis B Virus (HBV) is developed. The model consists of susceptible, exposed, infected, and recovered compartments, incorporating key epidemiological factors such as vertical transmission, disease progression, and recovery rates. The basic reproduction number, , which serves as a threshold parameter for disease persistence or eradication is derived. Stability analysis of the disease-free and endemic equilibrium points is conducted to assess the long-term behavior of the infection. Numerical simulations are performed to illustrate the impact of vaccination, treatment, and other control measures. The results provide insights into the effectiveness of various public health interventions and offer guidance for policymakers in designing strategies to mitigate the spread of HBV. Keywords: Hepatitis B, mathematical modeling, compartmental model, reproduction number, stability analysis, epidemiology
+      </div>
+ </div>
+
+    <div class="talk">
+      <strong>Speaker:</strong> Teri Parsonage <br/>
+      <strong>Title:</strong> Mathematical modelling of the regulation of tristetraprolin <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+  Tristetraprolin (TTP) is a messenger RNA (mRNA) binding protein that binds to pro-inflammatory mRNA and recruits protein complexes that promote mRNA degradation. As such, TTP is a key regulatory of the resolution of inflammation. TTP phosphorylation and activity is regulated by the mitogen-activated protein kinase (MAPK) p38 pathway, which is a cascade of phosphorylation events that promote thes expression of pro-inflammatory mRNAs. This pathway is complex with multiple protein interactions and a feedback loops, making it difficult to understand intuitively. To investigate this, a mathematical model of the pathway was developed using ordinary differential equations. The model can be used to make experimental predictions and, where biological results and mathematical results contradict, deepen our understanding of the pathway. In this way, the mathematical model informs experimental design and the experimental results refine the mathematical model to help identify new methods for the treatment of inflammatory disease.
+      </div>
+ </div>
+
+    <div class="talk">
+      <strong>Speaker:</strong> Diana-Patricia Danciu <br/>
+      <strong>Title:</strong> Unraveling Regulatory Feedback Mechanisms in Adult Neurogenesis Through Mathematical Modelling <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+  Adult neurogenesis is the process through which mature neurons are generated from neural stem cells in the adult brain. A comprehensive understanding of the mechanisms regulating this process is essential for developing effective interventions aimed at decelerating the decline of adult neurogenesis associated with ageing. Mechanistic models provide a valuable tool for studying the dynamics of neural stem cells and their lineage, and have revealed alterations in these mechanisms during the ageing process. In my presentation I will describe how these processes are modulated, by investigating regulatory feedbacks among neural populations through the lens of nonlinear differential equations models. I will discuss our observations regarding the manner in which different neural populations govern the time-evolution of the nerual lineage, and the impact that specific perturbations have on the system. Finally, I will draw attention on the perils of inference from preliminary models based on insufficiently informative data, without an extensive and unbiased investigation.
+      </div>
+ </div>        
     </div>
 
     <div class="session-block">
      <h3>Session: Patterns and Waves 2</h3>
+<div class="talk">
+      <strong>Speaker:</strong> Jonathan Potts <br/>
+      <strong>Title:</strong> Aggregation-diffusion in heterogeneous environments <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+  Aggregation-diffusion equations are foundational tools for modelling biological aggregations. Their principal use is to link the collective movement mechanisms of organisms to their emergent space use patterns in a concrete mathematical way. However, most existing studies do not account for the effect of the underlying environment on organism movement. In reality, the environment is often a key determinant of emergent space use  patterns, albeit in combination with collective aspects of motion. Here, I will present work towards this end, studying aggregation-diffusion equations in a heterogeneous environment in one spatial dimension. Under certain assumptions, it is possible to find exact analytic expressions for the steady-state solutions when diffusion is quadratic. Minimising the associated energy functional across these solutions provides a rapid way of determining the likely emergent space use pattern, which can be verified via numerical simulations. This energy-minimisation procedure is applied to a simple test case, where the environment consists of a single clump of attractive resources. Here, self-attraction and resource-attraction combine to shape the emergent aggregation. Two counter-intuitive findings emerge from these analytic results: (a) a non-monotonic dependence of clump width on the aggregation width, (b) a positive correlation between self-attraction strength and aggregation width when the resource attraction is strong.  
+      </div>
+ </div> 
 
+    <div class="talk">
+      <strong>Speaker:</strong> Cypres Verbeeck <br/>
+      <strong>Title:</strong> Beyond Classical Diffusion: Fractional Derivatives in Transport and Stochastic Systems <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+  Differential operators of integer order are known to capture local and isotropic effects, both in space and time. However, especially in biology, the increasing need to model complex phenomena with underlying properties such as spatial heterogeneity requires new modelling tools. The fractional calculus framework enables the development of more sophisticated models that capture the complex dynamics inherent to various biological systems. This talk will focus on how fractional reaction-diffusion equations naturally arise and can be derived from continuous-time random walks, highlighting the role of heavy-tailed distributions in the process. Both fractional partial differential equations, on the macroscopic level, as well as fractional stochastic differential equations, on the microscopic level, will be examined. For simple Riesz-fractional diffusion models, we will showcase comparative simulations, highlighting the key differences between fractional and classical diffusion. We propose a new numerical scheme that implements periodic boundary conditions, to control the loss of mass density. 
+      </div>
+ </div> 
+
+      <div class="talk">
+      <strong>Speaker:</strong> Andrew Bate <br/>
+      <strong>Title:</strong> Riding waves of social information <br/>
+      <span class="abstract-button" onclick="toggleAbstract(this)">Show Abstract</span>
+      <div class="abstract-content">
+ Observing the decisions and actions of others provides social information that can inform your actions such as whether to follow. We consider a model where all agents simultaneously gather stochastic private information (weighted towards an unknown preference), coming to a decision once sufficiently confident. However, decisions (and indecisions) by agents are observed by all other agents and provide social information. In particular, following a decision by one agent, other agents incorporate this social information with their private information and may follow this decision if the agent becomes sufficiently confident; forming a wave of decisions. This wave (or lack thereof) provides further social information about the private information of other agents, leading to potentially more waves in response to the (in)decision. We explore small groups of agents to see if all this social information leads to quicker and/or better decisions as well as the number of waves of decisions. We also explore whether agents remain undecided after these waves and what happens to these undecided agents. 
+      </div>
+ </div>
+        
+        
     </div>
   </section>
 
