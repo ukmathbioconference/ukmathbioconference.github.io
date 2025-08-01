@@ -93,6 +93,19 @@
   border-radius: 5px;
 }
 
+    .session-title {
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #004080;
+  margin: 0;
+}
+
+.session-content {
+  display: none;
+  margin-top: 15px;
+}
+
   </style>
 </head>
 <body>
@@ -115,8 +128,8 @@
 
     <!-- Example Session Block -->
     <div class="session-block">
-    <h3>Session: Mathematical Oncology 1</h3>
-
+  <div class="session-title" onclick="toggleSession(this)">Session: Mathematical Oncology 1</div>
+  <div class="session-content">
     <div class="talk">
       <strong>Speaker:</strong> Nathan Schofield<br/>
       <strong>Title:</strong> Mechanistic modelling of cluster formation in metastatic melanoma<br/>
