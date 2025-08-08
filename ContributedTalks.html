@@ -73,12 +73,13 @@
     }
 
     .abstract-content {
-      display: none;
-      margin-top: 5px;
-      padding: 10px;
-      background-color: #f0f0f0;
-      border-left: 4px solid #004080;
-    }
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.abstract-content.show {
+  max-height: 1000px; /* large enough to fit the content */
+}
 
     footer {
       text-align: center;
@@ -815,28 +816,12 @@
     <p>&copy; 2025 UK Mathematical Biology Conference</p>
   </footer>
 
-  <script>
-    function toggleAbstract(button) {
-      const content = button.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-        button.textContent = "Show Abstract";
-      } else {
-        content.style.display = "block";
-        button.textContent = "Hide Abstract";
-      }
-    }
-  </script>
+  
 <script>
   function toggleAbstract(button) {
     const content = button.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      button.textContent = "Show Abstract";
-    } else {
-      content.style.display = "block";
-      button.textContent = "Hide Abstract";
-    }
+    content.classList.toggle("show");
+    button.textContent = content.classList.contains("show") ? "Hide Abstract" : "Show Abstract";
   }
 
   function toggleSession(element) {
