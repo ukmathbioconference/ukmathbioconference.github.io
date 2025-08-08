@@ -841,10 +841,10 @@ function filterTalks() {
   if (!input) {
     sessions.forEach(session => {
       session.style.display = "block"; // show session title
-      const talks = session.querySelectorAll(".talk");
-      talks.forEach(talk => talk.style.display = "block"); // hide talks
       const content = session.querySelector(".session-content");
       if (content) content.style.display = "none"; // collapse
+      const talks = session.querySelectorAll(".talk");
+      talks.forEach(talk => talk.style.display = "block"); // show talks      
     });
     return;
   }
