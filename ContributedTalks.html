@@ -130,11 +130,12 @@
     </header>
 
   <section>
- <!-- Search box -->
-    <div style="max-width: 850px; margin: 0 auto 20px auto; padding: 0 20px;">
-      <label for="searchInput" style="font-weight: bold; color: #004080;">Search by speaker or title:</label>
-      <input type="text" id="searchInput" onkeyup="filterTalks()" placeholder="Start typing..." style="width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 4px;">
-    </div>
+<!-- Search box -->
+<div style="max-width: 850px; margin: 0 auto 20px auto; padding: 0 20px;">
+  <label for="searchInput" style="font-weight: bold; color: #004080;">Search by speaker or title:</label>
+  <input type="text" id="searchInput" onkeyup="filterTalks()" placeholder="Start typing..." style="width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+
       
     <h2  id="session-thu-1145">Contributed Talks Thursday 04 September 11:45-12:30 </h2>
 
@@ -841,22 +842,36 @@
 </script>
 
 <script>
-  function filterTalks() {
-    const input = document.getElementById("searchInput");
-    const filter = input.value.toLowerCase();
-    const talks = document.querySelectorAll(".talk");
+function filterTalks() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const sessions = document.querySelectorAll(".session-block");
+
+  sessions.forEach(session => {
+    let matchFoundInSession = false;
+    const talks = session.querySelectorAll(".talk");
 
     talks.forEach(talk => {
       const text = talk.textContent.toLowerCase();
-      if (text.includes(filter)) {
+      if (text.includes(input)) {
         talk.style.display = "block";
-        const session = talk.closest(".session-content");
-        if (session) session.classList.add("show"); // expand session if collapsed
+        matchFoundInSession = true;
       } else {
         talk.style.display = "none";
       }
     });
-  }
+
+    // Expand or collapse session based on match
+    const content = session.querySelector(".session-content");
+    if (matchFoundInSession) {
+      session.style.display = "block";
+      if (content) content.style.display = "block"; // auto-expand session
+    } else {
+      session.style.display = input ? "none" : "block"; // hide if searching
+      if (!input && content) content.style.display = "none"; // collapse if clearing search
+    }
+  });
+}
 </script>
+
 </body>
 </html>
