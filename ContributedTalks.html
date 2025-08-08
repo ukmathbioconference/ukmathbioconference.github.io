@@ -846,6 +846,19 @@ function filterTalks() {
   const input = document.getElementById("searchInput").value.toLowerCase();
   const sessions = document.querySelectorAll(".session-block");
 
+  // If search is empty → reset to collapsed state
+  if (!input) {
+    sessions.forEach(session => {
+      session.style.display = "block"; // show session title
+      const talks = session.querySelectorAll(".talk");
+      talks.forEach(talk => talk.style.display = "none"); // hide talks
+      const content = session.querySelector(".session-content");
+      if (content) content.style.display = "none"; // collapse
+    });
+    return;
+  }
+
+  // Otherwise → filter talks
   sessions.forEach(session => {
     let matchFoundInSession = false;
     const talks = session.querySelectorAll(".talk");
@@ -860,18 +873,18 @@ function filterTalks() {
       }
     });
 
-    // Expand or collapse session based on match
+    // Expand or collapse session based on matches
     const content = session.querySelector(".session-content");
     if (matchFoundInSession) {
       session.style.display = "block";
-      if (content) content.style.display = "block"; // auto-expand session
+      if (content) content.style.display = "block";
     } else {
-      session.style.display = input ? "none" : "block"; // hide if searching
-      if (!input && content) content.style.display = "none"; // collapse if clearing search
+      session.style.display = "none";
     }
   });
 }
 </script>
+
 
 </body>
 </html>
