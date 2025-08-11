@@ -850,16 +850,28 @@ function filterTalks() {
     let matchFoundInSession = false;
     const talks = session.querySelectorAll(".talk");
 
-    talks.forEach(talk => {
-      const text = talk.textContent.toLowerCase();
-      if (text.includes(input)) {
-        talk.style.display = "block";
-        matchFoundInSession = true;
-      } else {
-        talk.style.display = "none";
-      }
-    });
+    //talks.forEach(talk => {
+    //  const text = talk.textContent.toLowerCase();
+    //  if (text.includes(input)) {
+    //    talk.style.display = "block";
+    //    matchFoundInSession = true;
+    //  } else {
+    //    talk.style.display = "none";
+    //  }
+    //});
 
+    talks.forEach(talk => {
+        const clone = talk.cloneNode(true);
+        clone.querySelector(".abstract-content").remove();
+        const text = clone.textContent.toLowerCase().trim();
+        if (text.includes(input)) {
+            talk.style.display = "block";
+            matchFoundInSession = true;
+          } else {
+            talk.style.display = "none";
+          }
+    });
+        
     // Expand or collapse session based on matches
     const content = session.querySelector(".session-content");
     if (matchFoundInSession) {
