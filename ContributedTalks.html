@@ -861,8 +861,9 @@ function filterTalks() {
     //});
 
     talks.forEach(talk => {
-        talk.querySelector(".abstract-content").remove();
-        const text = talk.textContent.toLowerCase().trim();
+        const clone = talk.cloneNode(true);
+        clone.querySelector(".abstract-content").remove();
+        const text = clone.textContent.toLowerCase().trim();
         if (text.includes(input)) {
             talk.style.display = "block";
             matchFoundInSession = true;
