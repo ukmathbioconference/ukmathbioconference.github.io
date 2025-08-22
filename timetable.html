@@ -157,12 +157,14 @@
     <p>&copy; 2025 UK Mathematical Biology Conference</p>
 </footer>
 <script>
-function toggleInvitedAbstract(id) {
-  const abstract = document.getElementById(id);
+function toggleAbstract(button) {
+  const abstract = button.nextElementSibling;
   if (abstract.style.display === "block") {
     abstract.style.display = "none";
+    button.textContent = "Show Abstract";
   } else {
     abstract.style.display = "block";
+    button.textContent = "Hide Abstract";
   }
 }
 </script>
