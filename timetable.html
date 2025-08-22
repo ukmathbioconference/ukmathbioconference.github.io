@@ -68,6 +68,22 @@
             color: #fff;
             margin-top: 40px;
         }
+
+        .abstract-button {
+          color: #004080;
+          cursor: pointer;
+          text-decoration: underline;
+          display: inline-block;
+          margin-top: 5px;
+        }
+
+        .abstract-content {
+          display: none;
+          margin-top: 8px;
+          padding: 10px;
+          background-color: #f0f0f0;
+          border-left: 4px solid #004080;
+        }
     </style>
 </head>
 <body>
@@ -95,7 +111,19 @@
         <tr><th>Time</th><th>Session</th></tr>
         <tr><td>09:30</td><td>Registration</td></tr>
         <tr><td>10:00</td><td>Welcome</td></tr>
-        <tr><td>10:05</td><td>Invited Talk: Tiina Roose</td></tr>
+        <tr>
+          <td>10:05</td>
+          <td>
+            Invited Talk: Tiina Roose <br>
+            <em>Title: Image Based Modelling of Biological Processes</em><br>
+            <span class="abstract-button" onclick="toggleInvitedAbstract('abstract-roose')">
+              Show Abstract
+            </span>
+            <div id="abstract-roose" class="abstract-content">
+              My talk will describe a state of the art image based modelling in several seemingly different areas of biology. I will  show examples from biomedical (lymphatic, vascular and lung system) and agricultural problems of plant-soil interaction. I will describe the workflow from imaging (X-ray CT, XRF, SEM-EDX, histology), image reconstruction, image segmentation, computation and how to utilize this work stream to synthesise new scientific knowledge. In particular I will also outline several challenges and bottle necks in this process to hopefully encourage more mathematicians to get involved in the full pipeline.
+            </div>
+          </td>
+        </tr>
         <tr><td>10:30</td><td>Invited Talk: Anne Skeldon</td></tr>
         <tr><td>10:55</td><td>Invited Talk: Gibin Powathil </td></tr>
         <tr><td>11:20</td><td>Coffee Break </td></tr>
@@ -129,6 +157,15 @@
 <footer>
     <p>&copy; 2025 UK Mathematical Biology Conference</p>
 </footer>
-
+<script>
+function toggleInvitedAbstract(id) {
+  const abstract = document.getElementById(id);
+  if (abstract.style.display === "block") {
+    abstract.style.display = "none";
+  } else {
+    abstract.style.display = "block";
+  }
+}
+</script>
 </body>
 </html>
